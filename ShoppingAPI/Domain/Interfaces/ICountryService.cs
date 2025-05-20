@@ -6,7 +6,7 @@ namespace ShoppingAPI.Domain.Interfaces
     {
 
         
-       Task<IEnumerable<Country>> GetCountryAsync(); // firmas de los metodos lista de objetos 
+       Task<IEnumerable<Country>> GetCountriesAsync(); // firmas de los metodos lista de objetos 
 
         Task<Country> CreateCountryAsync(Country country) ; // firma de los metodos crear
         
