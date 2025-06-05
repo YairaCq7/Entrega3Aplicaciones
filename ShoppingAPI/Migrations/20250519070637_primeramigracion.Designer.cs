@@ -13,7 +13,7 @@ namespace ShoppingAPI.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
     [Migration("20250519070637_primeramigracion")]
-    partial class primeramigracion
+    partial class primeramigracion1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

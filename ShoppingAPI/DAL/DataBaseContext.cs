@@ -16,13 +16,16 @@ namespace ShoppingAPI.DAL
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Country>().HasIndex(c=> c.Name).IsUnique();//crear un indice unico para el campo name
+            modelBuilder.Entity<Country>().HasIndex(c => c.Name).IsUnique();//crear un indice unico para el campo name
 
+            modelBuilder.Entity<State>().HasIndex("Name", "CountryId").IsUnique();
         }
-        //cada tabla por cada entidad crear sudbsts
-        #region DbSets 
 
-        public DbSet<Country> Countries { get; set; } 
+        #region DbSets
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<State> States { get; set; }
+     
+
 
 
 
